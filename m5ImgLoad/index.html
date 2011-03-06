@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>m5ImgLoad</title> 
+	<meta name="keywords" content="m5ImageViewer,jQuery,プラグイン"> 
+	<meta name="description" content=""> 
+ 	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+	<link rel="alternate" type="application/rss+xml" href="http://5509.me/feed" title="RSS 2.0"> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="source/m5imgload.js"></script>
+	<script>
+		jQuery(function($) {
+			var imgSrc = "http://5509.me/wp-content/uploads/2010/12/pinboard.png";
+			$("#load").click(function() {
+				$("<img src='" + imgSrc + "'/>").load(function() {
+					alert("width: " + $(this).attr("width") + "\nheight: " + $(this).attr("height"));
+					$("body").append($(this));
+				});
+			});
+			$("#m5ImgLoad").click(function() {
+				$("<img src='" + imgSrc + "'/>").m5ImgLoad(function() {
+					alert("width: " + this.attr("width") + "\nheight: " + this.attr("height"));
+					$("body").append(this);
+				});
+			});
+			
+			//alert($("#testImg").width() + '\n' + $("#testImg").height());
+		});
+	</script>
+</head> 
+
+<body> 
+
+<!--<p class="note"><a href="http://5509.me/log/m5imgload">Archive</a> | <a href="http://5509.me/">5509</a></p>-->
+<div class="pagebody">
+	<!--<h1>m5ImgLoad</h1>-->
+	
+	<p><input type="button" id="load" value=".load()" />
+	<input type="button" id="m5ImgLoad" value=".m5ImgLoad()" /></p>
+	
+	<img src="http://5509.me/wp-content/uploads/2010/12/pinboard.png" id="testImg" />
+</div>
+<p class="copy">Copyright &copy <a href="http://5509.me/">5509</a> Some Rights Reserved.</p>
+  
+<script type="text/javascript"> 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4011945-3']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+<!--// GA -->
+
+<script src="http://i.yimg.jp/images/analytics/js/ywa.js"></script> 
+<script > 
+var YWATracker = YWA.getTracker("1000247265211");
+YWATracker.addExcludeProtocol("file:");
+YWATracker.submit();
+</script> 
+<noscript> 
+<div><img src="http://by.analytics.yahoo.co.jp/p.pl?a=1000247265211&amp;js=no" width="1" height="1" alt="" /></div>
+</noscript> 
+<!--// YA --> 
+  
+</body> 
+</html>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+#m5ImgViewerBlocker {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url(../images/blank.gif) repeat;
+}
+
+.m5ImgViewerPrev {
+	box-shadow: 5px 5px 10px #666;
+	-moz-box-shadow: 5px 5px 10px #666;
+	-webkit-box-shadow: 5px 5px 10px #666;
+}
+
+#m5ImgViewerLoadingIcon {
+	margin: -32px 0 0 -32px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #000 url(../images/m5imageviewerloading.gif) no-repeat center center;
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+#m5ImgViewerClose {
+	margin: -10px 0 0 -10px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/m5imageviewerclose.png) no-repeat;
+	z-index: 100;
+	cursor: pointer;
+}

@@ -1,0 +1,8 @@
+// 使い方
+
+// 動的に読み込んだ画像に対してm5ImgLoadを実行します
+
+$("<img src='hogehoge.jpg'/>").m5ImgLoad(function() {
+	// this: $(<img src="hogehoge.jpg" width="xxx" height="yyy" />)
+	alert("width: " + this.width() + "\nheight: " + this.height());
+});
