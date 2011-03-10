@@ -24,8 +24,6 @@
 			imgObjs = [],
 			currentImg = 0;
 			
-		console.log(clientHeight);
-			
 		for ( var i=0; i<_this.length; i++ ) {
 			imgObjs[i] = {};
 			imgObjs[i].y = $(_this[i]).offset().top;
