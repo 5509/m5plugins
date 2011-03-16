@@ -83,7 +83,7 @@
 				}
 			}
 		
-		// 対象要素の表示位置チェック用の要素追加
+		// 蟇ｾ雎｡隕∫ｴ縺ｮ陦ｨ遉ｺ菴咲ｽｮ繝√ぉ繝�繧ｯ逕ｨ縺ｮ隕∫ｴ霑ｽ蜉
 		$this
 			.html('')
 			.append(
@@ -93,7 +93,7 @@
 			
 		noticeElmChkOffset = noticeElmChk.offset();
 		
-		// サイズを取得して非表示にしておく
+		// 繧ｵ繧､繧ｺ繧貞叙蠕励＠縺ｦ髱櫁｡ｨ遉ｺ縺ｫ縺励※縺翫￥
 		$(conf.noticeBlock).show();
 		var noticeBlockSize = {
 			width: noticeBlock.attr('offsetWidth'),
