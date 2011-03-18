@@ -1,13 +1,13 @@
 /**
  * m5noticeDisplay
  *
- * @version      1.0
- * @author       nori (norimania@gmail.com)
- * @copyright    5509 (http://5509.me/)
- * @license      The MIT License
- * @link         http://5509.me/log/m5noticedisplay
+ * @version   1.1
+ * @author    nori (norimania@gmail.com)
+ * @copyright 5509 (http://5509.me/)
+ * @license   The MIT License
+ * @link      http://5509.me/log/m5noticedisplay
  *
- * @modified: 2011/03/16 19:58:06.
+ * @modified  2011/03/17 11:43:32.
  */
 
 ;(function($) {
@@ -24,13 +24,11 @@
             $this = this,
             chkClientSize = function() {
                 return {
-                    x: $("html").attr("clientWidth"), 
                     y: $("html").attr("clientHeight")
                 }
             },
             chkScrollPos = function() {
                 return {
-                    x: document.body.scrollLeft || document.documentElement.scrollLeft,
                     y: document.body.scrollTop || document.documentElement.scrollTop
                 }
             },
@@ -78,7 +76,7 @@
                                 queue    : false,
                                 duration : conf.duration,
                                 easing   : conf.easing,
-                                complete: function() { noticeBlock.hide() }
+                                complete : function() { noticeBlock.hide() }
                             });
                     }
                 }
@@ -109,6 +107,7 @@
         }
         $(conf.noticeBlock).hide();
         
+        // トリガーのバインド
         $(window)
             .scroll(function() {
                 scrollPos = chkScrollPos();
